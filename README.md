@@ -52,9 +52,7 @@ Felipe Duque – [@duquedotdev](https://twitter.com/duquedotdev) – felipe@duqu
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
-[https://github.com/duquedotdev/dumont](https://github.com/duquedotdev/dumont
-
-## Contributing
+## Contribua
 
 1. Faça o _fork_ do projeto (<https://github.com/yourname/yourproject/fork>)
 2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
