@@ -48,7 +48,7 @@ npm test
 
 ## Meta
 
-Felipe Duque – [@duquedotdev](https://twitter.com/duquedotde) – felipe@duque.dev
+Felipe Duque – [@duquedotdev](https://twitter.com/duquedotdev) – felipe@duque.dev
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
