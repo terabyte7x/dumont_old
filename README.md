@@ -5,6 +5,8 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
+<center><img src="https://i.ibb.co/YLpVjJ3/header.png" alt="header" border="0"></a></center>
+
 Este projeto partiu da visualização da necessidade de um sistema gratuíto que gerenciasse uma escola de aviação. Ele controla frota, alunos, funcionários, e outros setores da escola.
 
 O Dumont é de código aberto, podendo ser utilizado por qualquer escola de aviação em sua própria estrutura;
@@ -15,7 +17,6 @@ Este sistema não deve ser comercializado em hipótese alguma! No entanto, os de
 
 A {duque.dev} mantém planos de administração e suporte pagos (à partir de R$99,00/mês) para o sistema. Executamos os serviços de instalação, personalização, e criação de novos módulos;
 
-<center><img src="https://i.ibb.co/YLpVjJ3/header.png" alt="header" border="0"></a></center>
 
 ## Instalação
 
