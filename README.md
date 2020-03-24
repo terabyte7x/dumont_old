@@ -15,7 +15,7 @@ Este sistema não deve ser comercializado em hipótese alguma! No entanto, os de
 
 A {duque.dev} mantém planos de administração e suporte pagos (à partir de R$99,00/mês) para o sistema. Executamos os serviços de instalação, personalização, e criação de novos módulos;
 
-<a href="https://ibb.co/P6wVCJN"><img src="https://i.ibb.co/YLpVjJ3/header.png" alt="header" border="0"></a>
+<center><img src="https://i.ibb.co/YLpVjJ3/header.png" alt="header" border="0"></a></center>
 
 ## Instalação
 
