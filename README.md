@@ -25,10 +25,10 @@ Em breve as instruções de instação serão divulgadas.
 
 ## Escolas participantes 
 
-Adler (Desde 01/2020);
-Aeroclube de Araras (Desde 01/2020);
-Aeroclube de Resende (Desde 01/2020);
-Evale (Desde 01/2020);
+* Adler (Desde 01/2020);
+* Aeroclube de Araras (Desde 01/2020);
+* Aeroclube de Resende (Desde 01/2020);
+* Evale (Desde 01/2020);
 
 ## Histórico de lançamentos
 
