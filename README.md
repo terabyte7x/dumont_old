@@ -1,11 +1,11 @@
-# Dumont
+# Dumont Systems
 > Descrição curta sobre o que seu projeto faz.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-<center><img src="https://i.ibb.co/YLpVjJ3/header.png" alt="header" border="0"></a></center>
+<center><img src="https://duque.dev/images/laptop_1.png" alt="header" border="0"></a></center>
 
 Este projeto partiu da visualização da necessidade de um sistema gratuíto que gerenciasse uma escola de aviação. Ele controla frota, alunos, funcionários, e outros setores da escola.
 
@@ -13,18 +13,15 @@ O Dumont é de código aberto, podendo ser utilizado por qualquer escola de avia
 
 O Dumont pode ser alterado à qualquer momento por qualquer escola de aviação, desde que respeite os termos da licença de uso;
 
-Este sistema não deve ser comercializado em hipótese alguma! No entanto, os desenvolvedores interessados em prestar suporte e personalizar o sistema para o uso de seus clientes, podem encontrar auxílio neste site.;
+Este sistema não deve ser comercializado em hipótese alguma! No entanto, os desenvolvedores interessados em prestar suporte e personalizar o sistema para o uso de seus clientes, podem encontrar auxílio [aqui](https://duque.dev);
 
-A {duque.dev} mantém planos de administração e suporte pagos (à partir de R$99,00/mês) para o sistema. Executamos os serviços de instalação, personalização, e criação de novos módulos;
+A {duque.dev} mantém planos de administração e suporte pagos (à partir de R$0,75/hora de voo confirmada) para o sistema. Executamos os serviços de instalação, personalização, e criação de novos módulos;
 
 
 ## Instalação
 
-Ubuntu (.dev):
+Em breve as instruções de instação serão divulgadas.
 
-```sh
-npm install my-crazy-module --save
-```
 
 ## Escolas participantes 
 
@@ -32,13 +29,6 @@ Adler (Desde 01/2020);
 Aeroclube de Araras (Desde 01/2020);
 Aeroclube de Resende (Desde 01/2020);
 Evale (Desde 01/2020);
-
-## Configuração para Desenvolvimento
-
-```sh
-make install
-npm test
-```
 
 ## Histórico de lançamentos
 
@@ -55,7 +45,7 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## Contribua
 
-1. Faça o _fork_ do projeto (<https://github.com/yourname/yourproject/fork>)
+1. Faça o _fork_ do projeto (<https://github.com/duquedotdev/dumont/fork>)
 2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
 3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
 4. _Push_ (`git push origin feature/fooBar`)
