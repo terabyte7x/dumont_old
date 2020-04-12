@@ -15,7 +15,7 @@ O Dumont pode ser alterado à qualquer momento por qualquer escola de aviação,
 
 Este sistema não deve ser comercializado em hipótese alguma! No entanto, os desenvolvedores interessados em prestar suporte e personalizar o sistema para o uso de seus clientes, podem encontrar auxílio [aqui](https://duque.dev);
 
-A {duque.dev} mantém planos de administração e suporte pagos (à partir de R$0,75/hora de voo confirmada) para o sistema. Executamos os serviços de instalação, personalização, e criação de novos módulos;
+A [{duque.dev}](https://duque.dev) mantém planos de administração e suporte pagos (à partir de R$0,75/hora de voo confirmada) para o sistema. Executamos os serviços de instalação, personalização, e criação de novos módulos;
 
 
 ## Instalação
