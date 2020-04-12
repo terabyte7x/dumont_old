@@ -1,5 +1,5 @@
 # Dumont Systems
-> Sistema de gerenciamento de escola de aviação open-source.
+> Sistema open-source de gerenciamento de escola de aviação.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
