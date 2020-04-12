@@ -22,7 +22,7 @@
 
 ## Stack
 
-* Backend: [Node.Js] (https://nodejs.org)
+* Backend: [Node.Js](https://nodejs.org)
 * Frontend: [React](https://pt-br.reactjs.org)
 
 ## Escolas participantes 
