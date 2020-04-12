@@ -1,5 +1,5 @@
 # Dumont Systems
-> Descrição curta sobre o que seu projeto faz.
+> Sistema de gerenciamento de escola de aviação open-source.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
