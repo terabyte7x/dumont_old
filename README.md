@@ -28,6 +28,8 @@
 
 [Sprint Atual](https://trello.com/b/KlMxXoiE/dumont-systems)
 
+_Implementação dos padrões de projeto e criação estrutural
+
 ## Stack
 
 * Backend: [Node.Js](https://nodejs.org)
