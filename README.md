@@ -25,6 +25,14 @@
 * Backend: [Node.Js](https://nodejs.org)
 * Frontend: [React](https://pt-br.reactjs.org)
 
+## Nossa RB211 <3
+
+* [Node.Js](https://nodejs.org)
+* [PostgreSQL](https://#)
+* [Sequelize](https://#)
+* [Mongose](https://#)
+* [PostgreSQL](https://#)
+
 ## Escolas participantes 
 
 * Adler (Desde 01/2020);
@@ -37,7 +45,8 @@
 * 1.0.0 - Beta Bagatelle (Previsão => Julho 2020)
 
 * 0.0.1
-    * Abertura da estrutura do projeto;
+    * Definido os escopo de Projeto. 
+    * Genesis! Abertura da estrutura do projeto.
 
 ## Meta
 
