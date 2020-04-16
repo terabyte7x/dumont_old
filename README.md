@@ -26,7 +26,7 @@
 
 <center><img src="https://wac-cdn.atlassian.com/dam/jcr:7af87fb7-1d9d-40de-910b-852ad8fe1825/scrum@2x.png?cdnVersion=958" alt="header" border="0" height=100></a></center>
 
-[Sprint Atual](https://trello.com/b/KlMxXoiE/dumont-systems) _ Objetivo: Implementação dos padrões de projeto e criação estrutural_
+[Sprint Atual](https://trello.com/b/KlMxXoiE/dumont-systems)
 
 ## Stack
 
