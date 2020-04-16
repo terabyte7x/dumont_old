@@ -5,6 +5,9 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
+
+
+
 <center><img src="https://duque.dev/images/laptop_1.png" alt="header" border="0"></a></center>
 
 * Este projeto partiu da visualização da necessidade de um sistema gratuíto que gerenciasse uma escola de aviação. Ele controla frota, alunos, funcionários, e outros setores da escola.
@@ -19,6 +22,11 @@
 
 * O app mobile também está disponível para iOS e Android. Mais detalhes [aqui](https://dumont.systems/mobile).
 
+## Acompanhe o desenvolvimento do projeto aqui
+
+<center><img src="https://wac-cdn.atlassian.com/dam/jcr:7af87fb7-1d9d-40de-910b-852ad8fe1825/scrum@2x.png?cdnVersion=958" alt="header" border="0"></a></center>
+
+[Sprint Atual](https://trello.com/b/KlMxXoiE/dumont-systems)
 
 ## Stack
 
