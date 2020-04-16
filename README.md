@@ -35,7 +35,7 @@
 
 ## RB211 ♡
 
-Por ser meu motor favorito, escolhi este o nome para agradecer pelas tecnologias que fizem parte da engine que torna o Dumont o que é!
+Este é o meu motor aeronáutico favorito. O escolhi para referenciar (e agradecer) as tecnologias que fazem parte da 'engine' que torna o Dumont possível.
 
 * [Node.Js](https://nodejs.org), [Yarn](https://#), [PostgreSQL](https://#),  [Sequelize](https://#), [Mongoose](https://#), [ESlint - Standart: Airbnb](https://#), [Bcrypt](https://#), [JWT](https://#), [Datadog](https://#),[Express](https://#), [Sucrase](https://#), [Prettier](https://#), [Nodemon](https://#)
 
