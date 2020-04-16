@@ -25,13 +25,11 @@
 * Backend: [Node.Js](https://nodejs.org)
 * Frontend: [React](https://pt-br.reactjs.org)
 
-## Nossa RB211 <3
+## RB211 ♡
 
-* [Node.Js](https://nodejs.org)
-* [PostgreSQL](https://#)
-* [Sequelize](https://#)
-* [Mongose](https://#)
-* [PostgreSQL](https://#)
+Por ser meu motor favorito, escolhi este o nome para agradecer pelas tecnologias que fizem parte da engine que torna o Dumont o que é!
+
+* [Node.Js](https://nodejs.org), [Yarn](https://#), [PostgreSQL](https://#),  [Sequelize](https://#), [Mongoose](https://#), [ESlint - Standart: Airbnb](https://#), [Bcrypt](https://#), [JWT](https://#), [Datadog](https://#),[Express](https://#), [Sucrase](https://#), [Prettier](https://#), [Nodemon](https://#)
 
 ## Escolas participantes 
 
