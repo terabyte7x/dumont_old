@@ -2,7 +2,7 @@ import { Router } from 'express';
 import UsuarioController from './app/controllers/UsuarioController';
 import SessionController from './app/controllers/SessionController';
 import AuthMiddleware from './app/middlewares/auth';
-import UsuarioValidator from './validator/UsuarioValidator';
+import UsuarioValidator from './app/validators/UsuarioValidator';
 
 const routes = new Router();
 

@@ -9,12 +9,15 @@
   "private": false,
   "scripts": {
     "dev": "nodemon src/server.js",
-    "dev:debug": "nodemon --inspect src/server.js"
+    "dev:debug": "nodemon --inspect src/server.js",
+    "test": "cross-env NODE_ENV=test jest"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "celebrate": "^12.1.0",
+    "cross-env": "^7.0.2",
     "express": "^4.17.1",
+    "jest": "^25.3.0",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.0.2",
     "pg-hstore": "^2.3.3",
