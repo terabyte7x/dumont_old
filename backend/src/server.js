@@ -1,6 +1,9 @@
 import https from 'https';
 import fs from 'fs';
+import { errors } from 'celebrate';
 import app from './app';
+
+app.use(errors());
 
 https
   .createServer(

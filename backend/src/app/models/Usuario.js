@@ -17,7 +17,7 @@ class Usuario extends Model {
         usuario_ativo: Sequelize.BOOLEAN,
         admin: Sequelize.BOOLEAN,
         nome: Sequelize.STRING,
-        codigo_anac: Sequelize.INTEGER,
+        codigo_anac: Sequelize.STRING,
         email: Sequelize.STRING,
         senha: Sequelize.VIRTUAL,
         hash_senha: Sequelize.STRING,
