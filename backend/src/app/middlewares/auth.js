@@ -8,8 +8,8 @@ export default async (req, res, next) => {
     return res.status(401).json({ error: 'Token não fornecido!' });
   }
 
-  /* O que o authHeader fornece é um Array com o Breader e o JWT token.
-   * A variável abaixo descarta a palavra Breader e fica apenas com o token.
+  /* O que o authHeader fornece é um Array com o Bearer e o JWT token.
+   * A variável abaixo descarta a palavra Bearer e fica apenas com o token.
    */
   const [, token] = authHeader.split(' ');
 
