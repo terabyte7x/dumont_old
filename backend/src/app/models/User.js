@@ -56,12 +56,15 @@ class User extends Model {
   // Método que associa os arquivos de usuário a tabela arquivos
   //--------------------------------------------------------------
 
-  static avatar_id(models) {
-    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
-  }
-
-  static own_photo_id(models) {
-    this.belongsTo(models.File, { foreignKey: 'own_photo_id' });
+  static associate(models) {
+    this.belongsTo(models.File, {
+      foreignKey: 'avatar_id',
+      as: 'avatar',
+    });
+    this.belongsTo(models.File, {
+      foreignKey: 'own_photo_id',
+      as: 'own_photo',
+    });
   }
 
   //--------------------------------------------------------------

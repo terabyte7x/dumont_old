@@ -1,5 +1,6 @@
-/**
- * Criar sua própria chave de segredo!
+	/**
+ * @param secret: Gerar seu próprio MD5
+ * http://www.md5.cz
  */
 
 export default {

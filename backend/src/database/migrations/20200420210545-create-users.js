@@ -21,11 +21,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      anac: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true,
-      },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -42,6 +37,26 @@ module.exports = {
       updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
+      },
+      own_photo_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: { tableName: 'files' },
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: true,
+      },
+      avatar_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: { tableName: 'files' },
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: true,
       },
     });
   },
