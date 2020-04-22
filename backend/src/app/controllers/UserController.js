@@ -11,18 +11,10 @@ class UserController {
       return res.status(400).json({ error: 'E-mail already exists.' });
     }
 
-    // Verifica se o código anac está no banco de dados.
-    const anacExists = await User.findOne({ where: { anac: req.body.anac } });
-    if (anacExists) {
-      return res.status(400).json({ error: 'Anac already exists.' });
-    }
-
     // Se as verificações acima estiverem OK, ele permite criar um usuário.
-    const { id, name, anac, email, active_user, admin } = await User.create(
-      req.body
-    );
+    const { id, name, email, active_user, admin } = await User.create(req.body);
 
-    return res.json({ id, name, anac, email });
+    return res.json({ id, name, email });
   }
 
   async update(req, res) {
@@ -35,6 +27,7 @@ class UserController {
       }
     }
 
+    // Password Check
     if (oldPassword && !(await user.checkPassword(oldPassword))) {
       return res.status(401).json({ error: 'Password does not match' });
     }

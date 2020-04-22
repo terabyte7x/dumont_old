@@ -1,6 +1,6 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('aircraft', {
+    return queryInterface.createTable('aircrafts', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -8,10 +8,8 @@ module.exports = {
         primaryKey: true,
       },
       active_acft: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BOOLEAN,
         allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
       },
       flight_school_id: {
         type: Sequelize.INTEGER,
@@ -23,8 +21,9 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: true,
       },
+      registration: { type: Sequelize.STRING, allowNull: false },
       manufacturer: { type: Sequelize.STRING, allowNull: false },
-      year_of_manufacture: { type: Sequelize.STRING, allowNull: false },
+      year_of_manufacture: { type: Sequelize.DATEONLY, allowNull: false },
       model: { type: Sequelize.STRING, allowNull: false },
       serial_number: { type: Sequelize.STRING, allowNull: false },
       icao_type: { type: Sequelize.STRING, allowNull: false },
@@ -32,7 +31,7 @@ module.exports = {
       aircraft_class: { type: Sequelize.STRING, allowNull: false },
       mtow: { type: Sequelize.FLOAT, allowNull: false },
       mlw: { type: Sequelize.FLOAT, allowNull: false },
-      maximum_of_passengers: { type: Sequelize.STRING, allowNull: false },
+      maximum_of_passengers: { type: Sequelize.INTEGER, allowNull: false },
       authorized_flight_type: { type: Sequelize.STRING, allowNull: false },
       record_category: { type: Sequelize.STRING, allowNull: false },
       operation_status: { type: Sequelize.STRING, allowNull: false },
@@ -53,6 +52,6 @@ module.exports = {
   },
 
   down: (queryInterface) => {
-    return queryInterface.dropTable('aircraft');
+    return queryInterface.dropTable('aircrafts');
   },
 };

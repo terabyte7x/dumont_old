@@ -38,16 +38,6 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      own_photo_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: { tableName: 'files' },
-          key: 'id',
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
-        allowNull: true,
-      },
       avatar_id: {
         type: Sequelize.INTEGER,
         references: {

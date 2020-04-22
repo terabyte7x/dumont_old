@@ -1,4 +1,4 @@
-	/**
+/**
  * @param secret: Gerar seu próprio MD5
  * http://www.md5.cz
  */

@@ -6,7 +6,7 @@
 
 module.exports = {
   dialect: 'postgres',
-  host: '192.168.0.67',
+  host: '192.168.0.238',
   username: 'postgres',
   password: 'duquedotdev',
   database: 'dumont_v2',
