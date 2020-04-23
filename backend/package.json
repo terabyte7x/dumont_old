@@ -13,6 +13,7 @@
     "test": "cross-env NODE_ENV=test jest"
   },
   "dependencies": {
+    "accesscontrol": "^2.2.1",
     "bcryptjs": "^2.4.3",
     "celebrate": "^12.1.0",
     "cross-env": "^7.0.2",

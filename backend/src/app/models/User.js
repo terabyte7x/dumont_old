@@ -14,11 +14,31 @@ class User extends Model {
     super.init(
       {
         active_user: Sequelize.BOOLEAN,
-        admin: Sequelize.BOOLEAN,
         name: Sequelize.STRING,
         email: Sequelize.STRING,
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
+        admin: Sequelize.BOOLEAN,
+        role: Sequelize.ENUM({
+          values: [
+            'student',
+            'teacher',
+            'manager',
+            'director',
+            'financial',
+            'humanresources',
+            'technology',
+            'schedule',
+            'pedagogical',
+            'marketing',
+            'attendance',
+            'vendor',
+            'flightops',
+            'mechanist',
+            'maintancehead',
+            'instructionhead',
+          ],
+        }),
       },
       {
         sequelize,
@@ -27,11 +47,11 @@ class User extends Model {
     //--------------------------------------------------------------
     // Cria uma hash de salt 8 ou 15 para o usuário;
     //--------------------------------------------------------------
-    User.beforeUpdate(async (user) => {
-      if (user.admin) {
-        user.password_hash = await bcrypt.hash(user.password, 15);
-      } else {
+    User.beforeCreate(async (user) => {
+      if (!user.admin) {
         user.password_hash = await bcrypt.hash(user.password, 8);
+      } else {
+        user.password_hash = await bcrypt.hash(user.password, 15);
       }
       return this;
     });
@@ -39,10 +59,10 @@ class User extends Model {
     // Recria uma hash de salt 8 ou 15 para o usuário;
     //--------------------------------------------------------------
     User.beforeUpdate(async (user) => {
-      if (user.admin) {
-        user.password_hash = await bcrypt.hash(user.password, 15);
-      } else {
+      if (!user.admin) {
         user.password_hash = await bcrypt.hash(user.password, 8);
+      } else {
+        user.password_hash = await bcrypt.hash(user.password, 15);
       }
       return this;
     });
