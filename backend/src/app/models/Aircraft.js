@@ -20,6 +20,7 @@ class Aircraft extends Model {
         date_of_acquisition: Sequelize.DATE,
       },
       {
+        tableName: 'aircrafts',
         sequelize,
       }
     );

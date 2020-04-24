@@ -15,8 +15,11 @@ import File from '../models/File';
 class UserController {
   async index(req, res) {
     try {
+      const { page = 1 } = req.query;
       const users = await User.findAll({
         attributes: ['id', 'name', 'email'],
+        limit: 20,
+        offset: (page - 1) * 20,
         include: [
           {
             model: File,
@@ -75,31 +78,29 @@ class UserController {
 
   async update(req, res) {
     try {
+      const { id } = req.params;
       const { email, oldPassword } = req.body;
-      const user = req.params;
-      // const user = await User.findByPk(req.userId);
+      const infouser = await User.findOne({ where: { id } });
+      const user = await User.findByPk(id);
       if (email !== user.email) {
         const userExists = await User.findOne({ where: { email } });
         if (userExists) {
-          return res.status(400).json({
-            error:
-              'Este e-mail já pertence a um tripulante cadastrado no sistema.',
-          });
+          return res
+            .status(400)
+            .json({ error: 'E-mail de tripulante já cadastrado' });
         }
       }
 
-      // Password Check
       if (oldPassword && !(await user.checkPassword(oldPassword))) {
-        return res.status(401).json({ error: 'A senha não confere.' });
+        return res.status(401).json({ error: 'A senha não confere!' });
       }
 
-      const { id, name } = await user.update(req.body);
+      const { name } = await user.update(req.body);
 
-      return res.json({
-        message: `O usuário ${name}, ID ${id} foi alterado com sucesso!`,
-      });
+      return res.json(`Usuário ${name} alterado com sucesso!`);
     } catch (err) {
-      return res.status(500).json('Houve um erro. Por favor, tente novamente.');
+      // 'Houve um erro. Por favor, tente novamente.'
+      return res.status(500).json(err);
     }
   }
 

@@ -6,10 +6,10 @@
 
 module.exports = {
   dialect: 'postgres',
-  host: '192.168.0.238',
+  host: 'localhost',
   username: 'postgres',
   password: 'duquedotdev',
-  database: 'dumont_v2',
+  database: 'dumont',
   define: {
     timestamp: true,
     underscored: true,

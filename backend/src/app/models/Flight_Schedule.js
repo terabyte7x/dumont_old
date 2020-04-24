@@ -53,7 +53,7 @@ class Flight_Schedule extends Model {
     });
     this.belongsTo(models.File, {
       foreignKey: 'aircraft_id',
-      as: 'aircraft',
+      as: 'aircrafts',
     });
     this.belongsTo(models.File, {
       foreignKey: 'flight_instructor_id',
