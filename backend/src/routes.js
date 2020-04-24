@@ -2,8 +2,11 @@ import { Router } from 'express';
 import multer from 'multer';
 import multerConfig from './config/multer';
 import UserController from './app/controllers/UserController';
+import FlightInstructorController from './app/controllers/FlightInstructorController';
+import StudentController from './app/controllers/StudentController';
 import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
+import EmployeeController from './app/controllers/EmployeeController';
 import AirportController from './app/controllers/AirportController';
 import AircraftController from './app/controllers/AircraftController';
 import AuthMiddleware from './app/middlewares/auth';
@@ -102,6 +105,87 @@ routes.delete(
   '/aircrafts/:id',
   Role.grantAccess('deleteAny', 'aircrafts'),
   AircraftController.delete
+);
+
+// Employee
+routes.post(
+  '/employees',
+  Role.grantAccess('createAny', 'employee'),
+  EmployeeController.store
+);
+routes.get(
+  '/employees',
+  Role.grantAccess('readAny', 'employees'),
+  EmployeeController.index
+);
+routes.get(
+  '/employees/:id',
+  Role.grantAccess('readOwn', 'employee'),
+  EmployeeController.show
+);
+routes.put(
+  '/employees/:id',
+  Role.grantAccess('updateAny', 'employee'),
+  EmployeeController.update
+);
+routes.delete(
+  '/employees/:id',
+  Role.grantAccess('deleteAny', 'employee'),
+  EmployeeController.delete
+);
+
+// Flight Instructors
+routes.post(
+  '/flightinstructors',
+  Role.grantAccess('createAny', 'flightinstructors'),
+  FlightInstructorController.store
+);
+routes.get(
+  '/flightinstructors',
+  Role.grantAccess('readAny', 'flightinstructors'),
+  FlightInstructorController.index
+);
+routes.get(
+  '/flightinstructors/:id',
+  Role.grantAccess('readOwn', 'flightinstructor'),
+  FlightInstructorController.show
+);
+routes.put(
+  '/flightinstructors/:id',
+  Role.grantAccess('updateAny', 'flightinstructor'),
+  FlightInstructorController.update
+);
+routes.delete(
+  '/flightinstructors/:id',
+  Role.grantAccess('deleteAny', 'flightinstructor'),
+  FlightInstructorController.delete
+);
+
+// Students
+routes.post(
+  '/students',
+  Role.grantAccess('createOwn', 'students'),
+  StudentController.store
+);
+routes.get(
+  '/students',
+  Role.grantAccess('readAny', 'students'),
+  StudentController.index
+);
+routes.get(
+  '/students/:id',
+  Role.grantAccess('readOwn', 'students'),
+  StudentController.show
+);
+routes.put(
+  '/students/:id',
+  Role.grantAccess('updateOwn', 'students'),
+  StudentController.update
+);
+routes.delete(
+  '/students/:id',
+  Role.grantAccess('deleteOwn', 'students'),
+  StudentController.delete
 );
 
 export default routes;

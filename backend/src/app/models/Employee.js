@@ -5,7 +5,7 @@ class Employee extends Model {
     super.init(
       {
         user_id: Sequelize.INTEGER,
-        birthday: Sequelize.DATE,
+        birthday: Sequelize.DATEONLY,
         nationality: Sequelize.STRING,
         sex: Sequelize.STRING,
         passport: Sequelize.STRING,
@@ -37,22 +37,23 @@ class Employee extends Model {
         uf: Sequelize.STRING,
       },
       {
+        tableName: 'employees',
         sequelize,
       }
     );
   }
   //--------------------------------------------------------------
-  // Método que associa os arquivos de usuário a tabela arquivos
+  // Método que associa através de map no index.js
   //--------------------------------------------------------------
 
   static associate(models) {
-    this.hasOne(models.File, {
-      foreignKey: 'flightschool_id',
-      as: 'flightschool',
+    this.hasOne(models.User, {
+      foreignKey: 'id',
+      as: 'user',
     });
-    this.belongsTo(models.File, {
-      foreignKey: 'avatar_id',
-      as: 'avatar',
+    this.hasOne(models.Flightschool, {
+      foreignKey: 'id',
+      as: 'flightschool',
     });
     this.belongsTo(models.File, {
       foreignKey: 'pdf_rg_id',

@@ -14,13 +14,30 @@ ac.grant('student').readOwn(['user']).readAny(['airports']);
 
 // Teacher
 ac.grant('teacher')
-  .createAny(['file', 'airports', 'aircrafts'])
+  .createAny([
+    'file',
+    'airports',
+    'aircrafts',
+    'employee',
+    'flightinstructors',
+    'students',
+  ])
   .createOwn('user')
-  .readAny(['users', 'file', 'airports', 'aircrafts'])
+  .readAny([
+    'users',
+    'file',
+    'airports',
+    'aircrafts',
+    'employees',
+    'employee',
+    'flightinstructors',
+    'flightinstructor',
+    'students',
+  ])
   .readOwn(['user'])
-  .updateAny(['airports', 'aircrafts'])
+  .updateAny(['airports', 'aircrafts', 'employee'])
   .updateOwn('user')
-  .deleteAny(['airports', 'aircrafts'])
+  .deleteAny(['airports', 'aircrafts', 'employee'])
   .deleteOwn('user');
 
 // Verify if user have permission to perform the request action

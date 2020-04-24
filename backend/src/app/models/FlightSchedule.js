@@ -1,6 +1,6 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Flight_Schedule extends Model {
+class FlightSchedule extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -71,4 +71,4 @@ class Flight_Schedule extends Model {
   }
 }
 
-export default Flight_Schedule;
+export default FlightSchedule;

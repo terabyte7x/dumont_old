@@ -2,8 +2,8 @@
 /* eslint-disable class-methods-use-this */
 /**
  *
- * Aircrafts
- * @description  Controller de Aeroportos.
+ * Aeronaves
+ * @description  Controller de Aeronaves.
  * @author Felipe Duque <felipe@duque.dev>
  * @version 1.0.0
  *

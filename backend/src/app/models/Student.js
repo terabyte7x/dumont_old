@@ -43,13 +43,13 @@ class Student extends Model {
   //--------------------------------------------------------------
 
   static associate(models) {
-    this.hasOne(models.File, {
-      foreignKey: 'flightschool_id',
+    this.hasOne(models.Flightschool, {
+      foreignKey: 'id',
       as: 'flightschool',
     });
-    this.belongsTo(models.File, {
-      foreignKey: 'avatar_id',
-      as: 'avatar',
+    this.hasOne(models.User, {
+      foreignKey: 'id',
+      as: 'user',
     });
     this.belongsTo(models.File, {
       foreignKey: 'pdf_rg_id',

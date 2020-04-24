@@ -27,7 +27,7 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: true,
       },
-      birthday: { type: Sequelize.DATE, allowNull: false },
+      birthday: { type: Sequelize.DATEONLY, allowNull: false },
       nationality: { type: Sequelize.STRING, allowNull: true },
       sex: { type: Sequelize.STRING, allowNull: true },
       passport: { type: Sequelize.STRING, allowNull: true },
@@ -123,7 +123,7 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: true,
       },
-      proof_of_schooling: {
+      proof_of_schooling_id: {
         type: Sequelize.INTEGER,
         references: {
           model: { tableName: 'files' },
@@ -133,7 +133,7 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: true,
       },
-      proof_of_address: {
+      proof_of_address_id: {
         type: Sequelize.INTEGER,
         references: {
           model: { tableName: 'files' },
