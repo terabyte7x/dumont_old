@@ -10,6 +10,7 @@
  */
 import Aircraft from '../models/Aircraft';
 import File from '../models/File';
+import Queue from '../lib/Queue';
 
 class AircraftController {
   async store(req, res) {
@@ -29,7 +30,17 @@ class AircraftController {
         operation_status,
         date_of_acquisition,
       } = await Aircraft.create(req.body);
-      console.log(await req.body);
+
+      const aeroInfo = {
+        registration,
+        manufacturer,
+        model,
+        serial_number,
+        icao_type,
+      };
+
+      await Queue.add('Aerochain', { aeroInfo });
+
       return res.json(`A aeronave ${registration} foi criada com sucesso`);
     } catch (err) {
       // {

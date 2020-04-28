@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import multer from 'multer';
+
 import multerConfig from './config/multer';
 import UserController from './app/controllers/UserController';
 import FlightInstructorController from './app/controllers/FlightInstructorController';

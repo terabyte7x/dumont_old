@@ -14,7 +14,9 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    "prettier/prettier" : "error",
+    "prettier/prettier" :  ["error", {
+      "endOfLine":"auto"
+    }],
     "class-method-use-this" : "off",
     "no-param-reassing" : "off", //Precisa estar desabilitado por causa do sequilize
     "camelcase" : "off",

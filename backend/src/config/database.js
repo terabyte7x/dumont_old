@@ -6,10 +6,10 @@
 
 module.exports = {
   dialect: 'postgres',
-  host: 'localhost',
-  username: 'postgres',
-  password: 'duquedotdev',
-  database: 'dumont',
+  host: process.env.POSTGRES_HOST,
+  username: process.env.POSTGRES_USERNAME,
+  password: process.env.POSTGRES_PASS,
+  database: process.env.POSTGRES_DB,
   define: {
     timestamp: true,
     underscored: true,

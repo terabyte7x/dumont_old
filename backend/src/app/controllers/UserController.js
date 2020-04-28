@@ -11,6 +11,7 @@
 
 import User from '../models/User';
 import File from '../models/File';
+import Queue from '../lib/Queue';
 
 class UserController {
   async index(req, res) {
@@ -28,6 +29,7 @@ class UserController {
           },
         ],
       });
+
       return res.json(users);
     } catch (err) {
       return res.status(500).json('Houve um erro. Por favor, tente novamente.');
@@ -68,9 +70,16 @@ class UserController {
           .status(400)
           .json({ error: 'Este tripulante já está cadastrado no sistema' });
       }
-      const { id, name, email, role } = await User.create(req.body);
+      // const { id, name, email, role } = await User.create(req.body);
+      const { name, email, password, role } = req.body;
 
-      return res.json({ id, name, email });
+      const user = { name, email, password, role };
+
+      await User.create(user);
+
+      await Queue.add('RegistrationMail', { user });
+
+      return res.json({ name, email, role });
     } catch (err) {
       return res.status(500).json('Houve um erro. Por favor, tente novamente.');
     }
