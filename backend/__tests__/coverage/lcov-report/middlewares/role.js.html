@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">55% </span>
+                <span class="strong">95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/20</span>
+                <span class='fraction'>19/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.77% </span>
+                <span class="strong">76.92% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/13</span>
+                <span class='fraction'>10/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">94.44% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/18</span>
+                <span class='fraction'>17/18</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -130,7 +130,8 @@
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -146,6 +147,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,29 +177,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,6 +231,7 @@ ac.grant('teacher')
   ])
   .createOwn('user')
   .readAny([
+    'user',
     'users',
     'file',
     'airports',
@@ -242,35 +245,35 @@ ac.grant('teacher')
   .readOwn(['user'])
   .updateAny(['airports', 'aircrafts', 'employee'])
   .updateOwn('user')
-  .deleteAny(['airports', 'aircrafts', 'employee'])
+  .deleteAny(['user', 'airports', 'aircrafts', 'employee'])
   .deleteOwn('user');
 &nbsp;
 // Verify if user have permission to perform the request action
 exports.grantAccess = function (action, resource) {
-  return <span class="fstat-no" title="function not covered" >as</span>ync (req, res, next) =&gt; {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-      const { id, role } = <span class="cstat-no" title="statement not covered" >await User.findByPk(req.userId);</span>
+  return async (req, res, next) =&gt; {
+    try {
+      const { id, role } = await User.findByPk(req.userId);
 &nbsp;
       // Verify if its own information
       const own =
-<span class="cstat-no" title="statement not covered" >        JSON.stringify(id) == req.params.id &amp;&amp;</span>
+        JSON.stringify(id) == req.params.id &amp;&amp;
         (ac.can(role).createOwn(resource).granted ||
-          ac.can(role).readOwn(resource).granted ||
-          ac.can(role).updateOwn(resource).granted ||
-          ac.can(role).deleteOwn(resource).granted);
+<span class="branch-2 cbranch-no" title="branch not covered" >          ac.can(role).readOwn(resource).granted </span>||
+<span class="branch-3 cbranch-no" title="branch not covered" >          ac.can(role).updateOwn(resource).granted </span>||
+<span class="branch-4 cbranch-no" title="branch not covered" >          ac.can(role).deleteOwn(resource).granted)</span>;
 &nbsp;
       // Allows user to perform his acctions
-      const permission = <span class="cstat-no" title="statement not covered" >ac.can(role)[action](resource);</span>
-<span class="cstat-no" title="statement not covered" >      console.log(permission);</span>
+      const permission = ac.can(role)[action](resource);
+      console.log(permission);
       //  !permission.granted
       // If allows don't have permissions it shows a massage
-<span class="cstat-no" title="statement not covered" >      if (!permission.granted &amp;&amp; !own) {</span>
-<span class="cstat-no" title="statement not covered" >        return res.status(401).json({</span>
+      if (!permission.granted &amp;&amp; !own) {
+        return res.status(401).json({
           error:
             'Você não tem permissão para esta ação. Contate o administrador do sistema.',
         });
       }
-<span class="cstat-no" title="statement not covered" >      next();</span>
+      next();
     } catch (error) {
 <span class="cstat-no" title="statement not covered" >      next(error);</span>
     }
@@ -283,7 +286,7 @@ exports.grantAccess = function (action, resource) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed May 27 2020 11:41:23 GMT-0300 (Horário Padrão de Brasília)
+                at Wed May 27 2020 18:12:42 GMT-0300 (Horário Padrão de Brasília)
             </div>
         </div>
         <script src="../prettify.js"></script>

@@ -24,6 +24,7 @@ ac.grant('teacher')
   ])
   .createOwn('user')
   .readAny([
+    'user',
     'users',
     'file',
     'airports',
@@ -37,7 +38,7 @@ ac.grant('teacher')
   .readOwn(['user'])
   .updateAny(['airports', 'aircrafts', 'employee'])
   .updateOwn('user')
-  .deleteAny(['airports', 'aircrafts', 'employee'])
+  .deleteAny(['user', 'airports', 'aircrafts', 'employee'])
   .deleteOwn('user');
 
 // Verify if user have permission to perform the request action

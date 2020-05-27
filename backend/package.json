@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "npm-run-all -p dev:*",
+    "dev": "NODE_ENV=development npm-run-all -p dev:*",
     "dev:server": "nodemon src/server.js",
     "dev:queue": "nodemon --inspect src/queue.js",
     "debug": "nodemon --inspect src/queue.js",
