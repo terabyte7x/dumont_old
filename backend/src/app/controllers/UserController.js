@@ -61,28 +61,24 @@ class UserController {
   }
 
   async store(req, res) {
-    try {
-      const emailExists = await User.findOne({
-        where: { email: req.body.email },
-      });
-      if (emailExists) {
-        return res
-          .status(400)
-          .json({ error: 'Este tripulante já está cadastrado no sistema' });
-      }
-      // const { id, name, email, role } = await User.create(req.body);
-      const { name, email, password, role } = req.body;
-
-      const user = { name, email, password, role };
-
-      await User.create(user);
-
-      await Queue.add('RegistrationMail', { user });
-
-      return res.json({ name, email, role });
-    } catch (err) {
-      return res.status(500).json('Houve um erro. Por favor, tente novamente.');
+    const emailExists = await User.findOne({
+      where: { email: req.body.email },
+    });
+    if (emailExists) {
+      return res
+        .status(400)
+        .json({ error: 'Este tripulante já está cadastrado no sistema' });
     }
+    // const { id, name, email, role } = await User.create(req.body);
+    const { name, email, password, role } = req.body;
+
+    const user = { name, email, password, role };
+
+    await User.create(user);
+
+    // await Queue.add('RegistrationMail', { user });
+
+    return res.status(200).json({ name, email, role });
   }
 
   async update(req, res) {

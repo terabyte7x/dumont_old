@@ -14,6 +14,7 @@ class File extends Model {
         },
       },
       {
+        tableName: 'files',
         sequelize,
       }
     );

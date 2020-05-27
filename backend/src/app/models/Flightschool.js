@@ -25,6 +25,7 @@ class Flightschool extends Model {
         uf: Sequelize.STRING,
       },
       {
+        tableName: 'flight_schools',
         sequelize,
       }
     );

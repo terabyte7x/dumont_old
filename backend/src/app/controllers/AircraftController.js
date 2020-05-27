@@ -39,7 +39,7 @@ class AircraftController {
         icao_type,
       };
 
-      await Queue.add('Aerochain', { aeroInfo });
+      await Queue.add('Aerochain', { aeroInfo }); // Abstratir
 
       return res.json(`A aeronave ${registration} foi criada com sucesso`);
     } catch (err) {

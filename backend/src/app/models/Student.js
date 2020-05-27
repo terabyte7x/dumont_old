@@ -34,6 +34,7 @@ class Student extends Model {
         uf: Sequelize.STRING,
       },
       {
+        tableName: 'students',
         sequelize,
       }
     );

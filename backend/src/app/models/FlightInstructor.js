@@ -38,6 +38,7 @@ class FlightInstructor extends Model {
         uf: Sequelize.STRING,
       },
       {
+        tableName: 'flight_instructors',
         sequelize,
       }
     );

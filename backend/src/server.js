@@ -12,6 +12,8 @@ Bullboard.setQueues(Queue.queues.map((queue) => queue.bull));
 
 app.use('/admin/queues', Bullboard.UI);
 
+app.listen(3333);
+
 https
   .createServer(
     {
@@ -21,4 +23,4 @@ https
     },
     app
   )
-  .listen(3333);
+  .listen(3434);

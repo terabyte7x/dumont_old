@@ -13,6 +13,7 @@ class Airport extends Model {
         altitude: Sequelize.INTEGER,
       },
       {
+        tableName: 'airports',
         sequelize,
       }
     );

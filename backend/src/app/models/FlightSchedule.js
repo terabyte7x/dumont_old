@@ -37,6 +37,7 @@ class FlightSchedule extends Model {
         }),
       },
       {
+        tableName: 'flight_schedules',
         sequelize,
       }
     );

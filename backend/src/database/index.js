@@ -27,7 +27,7 @@ const models = [
 class Database {
   constructor() {
     this.init();
-    this.mongo();
+    // this.mongo();
   }
 
   init() {
@@ -38,13 +38,13 @@ class Database {
     );
   }
 
-  mongo() {
-    this.mongoConnection = mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useFindAndModify: true,
-      useUnifiedTopology: true,
-    });
-  }
+  // mongo() {
+  //   this.mongoConnection = mongoose.connect(process.env.MONGODB_URI, {
+  //     useNewUrlParser: true,
+  //     useFindAndModify: true,
+  //     useUnifiedTopology: true,
+  //   });
+  // }
 }
 
 export default new Database();
