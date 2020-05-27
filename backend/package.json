@@ -12,7 +12,11 @@
     "dev:server": "nodemon src/server.js",
     "dev:queue": "nodemon --inspect src/queue.js",
     "debug": "nodemon --inspect src/queue.js",
-    "test": "cross-env NODE_ENV=test jest"
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js",
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "postest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "dependencies": {
     "accesscontrol": "^2.2.1",
@@ -25,7 +29,7 @@
     "dotenv": "^8.2.0",
     "eslint-plugin-security": "^1.4.0",
     "express": "^4.17.1",
-    "jest": "^25.3.0",
+    "express-async-errors": "^3.1.1",
     "js-sha3": "^0.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.6",
@@ -34,9 +38,17 @@
     "nodemailer": "^6.4.6",
     "pg": "^8.0.2",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.21.6"
+    "sequelize": "^5.21.6",
+    "sqlite3": "^4.2.0",
+    "youch": "^2.0.10"
   },
   "devDependencies": {
+    "factory-girl": "^5.0.4",
+    "faker": "^4.1.0",
+    "jest": "^26.0.1",
+    "supertest": "^4.0.2",
+    "@sucrase/jest-plugin": "^2.0.0",
+    "@types/jest": "^25.2.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.10.1",

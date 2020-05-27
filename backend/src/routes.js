@@ -17,14 +17,15 @@ import Role from './app/middlewares/role';
 const routes = new Router();
 const upload = multer(multerConfig);
 
-// Allow user to Create Own user, and create a Session JWT
+// Esta parte do usuário está aqui pois tudo abaixo do routes.use(AuthMiddleware)
+// precisa de autenticação JWT
 routes.post('/users', UserController.store);
 routes.post('/session', SessionController.store);
 
-// Authenticates the user's token. Each route below pass throw JWT authentication.
+// Autentica todos os usuários a partir deste ponto
 routes.use(AuthMiddleware);
 
-// Files
+// Arquivos
 routes.post(
   '/files',
   Role.grantAccess('createAny', 'file'),
@@ -32,7 +33,7 @@ routes.post(
   FileController.store
 );
 
-// Users
+// Usuários
 routes.get(
   '/users',
   Role.grantAccess('readAny', 'users'),
@@ -54,7 +55,7 @@ routes.delete(
   UserController.delete
 );
 
-// Airports
+// Aeroportos
 routes.post(
   '/airports',
   Role.grantAccess('createAny', 'airports'),
@@ -81,7 +82,7 @@ routes.delete(
   AirportController.delete
 );
 
-// Aircrafts
+// Aeronaves
 routes.post(
   '/aircrafts',
   Role.grantAccess('createAny', 'aircrafts'),
@@ -108,7 +109,7 @@ routes.delete(
   AircraftController.delete
 );
 
-// Employee
+// Empresas
 routes.post(
   '/employees',
   Role.grantAccess('createAny', 'employee'),
@@ -135,7 +136,7 @@ routes.delete(
   EmployeeController.delete
 );
 
-// Flight Instructors
+// Instrutores de Voo
 routes.post(
   '/flightinstructors',
   Role.grantAccess('createAny', 'flightinstructors'),
@@ -162,7 +163,7 @@ routes.delete(
   FlightInstructorController.delete
 );
 
-// Students
+// Alunos
 routes.post(
   '/students',
   Role.grantAccess('createOwn', 'students'),
