@@ -11,7 +11,7 @@ const sha512 = require('js-sha3').keccak512;
 
 class Aerochain {}
 
-Aerochain.prototype.getLastBlock = function () {
+Aerochain.prototype.getLastBlock = () => {
   (async function () {
     const client = new MongoClient(process.env.MONGODB_URI, {
       useNewUrlParser: true,
@@ -41,11 +41,11 @@ Aerochain.prototype.getLastBlock = function () {
   })();
 };
 
-Aerochain.prototype.hashBlock = function (
+Aerochain.prototype.hashBlock = (
   previousBlockHash,
   currentBlockData,
   nonce
-) {
+) => {
   const dataAsString = previousBlockHash + nonce + currentBlockData;
 
   const hash = sha512(dataAsString);
@@ -53,10 +53,7 @@ Aerochain.prototype.hashBlock = function (
   return hash;
 };
 
-Aerochain.prototype.proofOfWork = function (
-  previousBlockHash,
-  currentBlockData
-) {
+Aerochain.prototype.proofOfWork = (previousBlockHash, currentBlockData) => {
   let nonce = 0;
   let hash = this.hashBlock(previousBlockHash, currentBlockData, nonce);
   while (hash.substring(124, 128) !== '0000') {
