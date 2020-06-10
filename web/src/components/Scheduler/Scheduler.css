@@ -1,0 +1,7 @@
+.scheduler-container {
+  display: flex;
+      align-self: center;
+    justify-content: center;
+    height: 1150px;
+    width: 980px;
+}
