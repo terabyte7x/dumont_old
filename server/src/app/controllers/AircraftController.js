@@ -38,7 +38,7 @@ class AircraftController {
       icao_type,
     };
 
-    // await Queue.add('Aerochain', { aeroInfo }); // Abstratir
+    await Queue.add('Aerochain', { aeroInfo }); // Abstratir
 
     return res.status(200).json(aeroInfo);
   }

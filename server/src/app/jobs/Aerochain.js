@@ -107,7 +107,7 @@ export default {
           previousBlockHash: lastblock[0].hash,
         });
 
-        // // Genesis;
+        // Genesis;
         // const block = await db.collection('aerochain').insertOne({
         //   index: (await db.collection('aerochain').countDocuments()) + 1,
         //   timestamp: Date.now(),
