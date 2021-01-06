@@ -6,7 +6,7 @@
     "@date-io/moment": "^2.6.0",
     "@rocketseat/unform": "^1.5.1",
     "a11y-react-emoji": "^1.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "d3-scale": "^3.2.1",
     "date-fns": "^2.0.0-beta.2",
     "date-fns-tz": "^1.0.7",
