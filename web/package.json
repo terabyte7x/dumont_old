@@ -13,7 +13,7 @@
     "dhtmlx-gantt": "^7.0.4",
     "dhtmlx-scheduler": "^5.3.9",
     "history": "^4.9.0",
-    "immer": "^6.0.9",
+    "immer": "^9.0.6",
     "polished": "^3.6.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
